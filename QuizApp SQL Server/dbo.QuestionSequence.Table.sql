@@ -1,0 +1,18 @@
+USE [QuizApp]
+GO
+/****** Object:  Table [dbo].[QuestionSequence]    Script Date: 8/21/2025 11:45:19 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[QuestionSequence](
+	[SequenceId] [int] IDENTITY(1,1) NOT NULL,
+	[SequenceNum] [int] NOT NULL,
+	[QuizID] [int] NOT NULL,
+	[QuestionID] [int] NOT NULL,
+ CONSTRAINT [PK_QuestionSequence] PRIMARY KEY CLUSTERED 
+(
+	[SequenceId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO

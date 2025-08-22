@@ -1,0 +1,466 @@
+/* ViewQuiz Component Styles */
+
+/* Main container */
+.view-quiz {
+  padding: 20px;
+  max-width: 1600px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+/* Header section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 24px;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Quiz info section */
+.quiz-info {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 1px solid #e0e0e0;
+}
+
+.info-row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 15px;
+}
+
+.info-row:last-child {
+  margin-bottom: 0;
+}
+
+.info-cell {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-cell strong {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.info-cell span {
+  color: #333;
+  font-size: 16px;
+}
+
+/* Questions grid section */
+.questions-grid-section {
+  margin-top: 30px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 20px;
+}
+
+/* Table styles - CRITICAL FIXES */
+.questions-grid {
+  background: white;
+  border-radius: 8px;
+  overflow-x: auto;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.questions-grid table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed !important;
+}
+
+/* HIDE HIDDEN COLUMNS */
+.questions-grid .hidden-column,
+.questions-grid th:nth-child(1),
+.questions-grid td:nth-child(1),
+.questions-grid th:nth-child(6),
+.questions-grid td:nth-child(6) {
+  display: none !important;
+  width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+/* FIXED COLUMN WIDTHS - EXACT MATCH TO TABLE STRUCTURE */
+/* Column 2: Seq (60px) */
+.questions-grid th:nth-child(2),
+.questions-grid td:nth-child(2) {
+  width: 60px !important;
+  min-width: 60px !important;
+  max-width: 60px !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  padding: 8px 4px !important;
+}
+
+
+
+/* Column 3: Question (300px) */
+.questions-grid th:nth-child(3),
+.questions-grid td:nth-child(3) {
+  width: 300px !important;
+  min-width: 300px !important;
+  max-width: 300px !important;
+  text-align: left !important;
+  vertical-align: top !important;
+  padding: 8px !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+
+
+/* Column 4: Time Limit (120px) */
+.questions-grid th:nth-child(4),
+.questions-grid td:nth-child(4) {
+  width: 120px !important;
+  min-width: 120px !important;
+  max-width: 120px !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  padding: 8px 4px !important;
+}
+
+
+
+/* Column 5: Difficulty (100px) */
+.questions-grid th:nth-child(5),
+.questions-grid td:nth-child(5) {
+  width: 100px !important;
+  min-width: 100px !important;
+  max-width: 100px !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  padding: 8px 4px !important;
+}
+
+
+
+/* Column 7: Answer (250px) */
+.questions-grid th:nth-child(7),
+.questions-grid td:nth-child(7) {
+  width: 250px !important;
+  min-width: 250px !important;
+  max-width: 250px !important;
+  text-align: left !important;
+  vertical-align: middle !important;
+  padding: 8px !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+
+
+/* Column 8: IsCorrect (80px) */
+.questions-grid th:nth-child(8),
+.questions-grid td:nth-child(8) {
+  width: 80px !important;
+  min-width: 80px !important;
+  max-width: 80px !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  padding: 8px 4px !important;
+}
+
+
+
+ /* Column 9: Actions (50px) */
+ .questions-grid th:nth-child(9),
+ .questions-grid td:nth-child(9) {
+   width: 50px !important;
+   min-width: 50px !important;
+   max-width: 50px !important;
+   text-align: center !important;
+   vertical-align: middle !important;
+   padding: 8px 4px !important;
+ }
+
+
+
+/* Table headers */
+.questions-grid th {
+  background: #f8f9fa !important;
+  padding: 12px 8px !important;
+  border-bottom: 2px solid #dee2e6 !important;
+  font-weight: 600 !important;
+  color: #495057 !important;
+  font-size: 14px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Table cells */
+.questions-grid td {
+  padding: 8px !important;
+  border-bottom: 1px solid #dee2e6 !important;
+  vertical-align: middle !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+}
+
+/* Question row styling */
+.question-header {
+  background: #ffffff !important;
+}
+
+.question-header td {
+  border-bottom: 2px solid #e9ecef !important;
+  padding: 12px 8px !important;
+  font-weight: 500 !important;
+}
+
+/* Answer row styling */
+.answer-row {
+  background: #f8f9fa !important;
+}
+
+.answer-row td {
+  border-bottom: 1px solid #dee2e6 !important;
+  padding: 8px !important;
+  font-size: 13px !important;
+}
+
+/* Sequence container styling */
+.sequence-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 4px !important;
+}
+
+.sequence-btn {
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  padding: 2px !important;
+  font-size: 12px !important;
+  color: #6c757d !important;
+  transition: color 0.2s !important;
+}
+
+.sequence-btn:hover {
+  color: #495057 !important;
+}
+
+.sequence-number {
+  font-weight: 600 !important;
+  color: #495057 !important;
+  font-size: 14px !important;
+}
+
+/* Answer actions cell */
+.answer-actions-cell {
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+
+.delete-answer-btn {
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  padding: 4px !important;
+  font-size: 14px !important;
+  color: #dc3545 !important;
+  border-radius: 4px !important;
+  transition: background-color 0.2s !important;
+}
+
+.delete-answer-btn:hover {
+  background-color: #f8d7da !important;
+}
+
+/* Actions cell */
+.actions-cell {
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+
+.edit-question-btn {
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  padding: 4px !important;
+  font-size: 14px !important;
+  color: #007bff !important;
+  border-radius: 4px !important;
+  transition: background-color 0.2s !important;
+  margin-right: 4px !important;
+}
+
+.edit-question-btn:hover {
+  background-color: #e3f2fd !important;
+}
+
+.delete-question-btn {
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  padding: 4px !important;
+  font-size: 14px !important;
+  color: #dc3545 !important;
+  border-radius: 4px !important;
+  transition: background-color 0.2s !important;
+}
+
+.delete-question-btn:hover {
+  background-color: #f8d7da !important;
+}
+
+/* Correct/Incorrect answer styling */
+.correct-answer {
+  color: #28a745 !important;
+  font-weight: bold !important;
+  text-align: center !important;
+}
+
+.incorrect-answer {
+  color: #dc3545 !important;
+  font-weight: bold !important;
+  text-align: center !important;
+}
+
+/* Question actions styling */
+.question-actions {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 4px !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.action-label {
+  font-weight: bold !important;
+  color: #495057 !important;
+  font-size: 12px !important;
+  text-align: center !important;
+}
+
+.action-buttons {
+  display: flex !important;
+  gap: 2px !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.edit-question-btn {
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  padding: 2px !important;
+  font-size: 12px !important;
+  color: #007bff !important;
+  border-radius: 2px !important;
+  transition: background-color 0.2s !important;
+}
+
+.edit-question-btn:hover {
+  background-color: #e3f2fd !important;
+}
+
+.delete-question-btn {
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  padding: 2px !important;
+  font-size: 12px !important;
+  color: #dc3545 !important;
+  border-radius: 2px !important;
+  transition: background-color 0.2s !important;
+}
+
+.delete-question-btn:hover {
+  background-color: #f8d7da !important;
+}
+
+/* Loading and error states */
+.loading-message,
+.error-message,
+.no-questions-message {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  font-size: 16px;
+}
+
+.error-message {
+  color: #dc3545;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .view-quiz {
+    padding: 15px;
+    max-width: 100%;
+  }
+  
+  .questions-grid {
+    overflow-x: auto;
+  }
+  
+  .questions-grid table {
+    table-layout: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .view-quiz {
+    padding: 10px;
+  }
+  
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  .info-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  .questions-grid {
+    overflow-x: auto;
+  }
+  
+  .questions-grid table {
+    table-layout: auto;
+  }
+}
